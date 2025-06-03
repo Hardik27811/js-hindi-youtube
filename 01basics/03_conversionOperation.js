@@ -1,4 +1,4 @@
-let score="33"
+/*let score="33"
 console.log(typeof score); //string
 console.log(typeof (score));  //string
 let valueInNumber=Number(score)
@@ -64,5 +64,57 @@ console.log(booleanisLogedIn)
 // "hitesh" =>true
 //null => false 
 //undefined => false
+*/
+
+//. *************************************** Operations ****************************************
+// let value=12
+// let negvalue=-value
+// console.log(negvalue);
+
+
+// console.log(2+2);
+// console.log(2-2);
+// console.log(2*2);
+// console.log(32/4);
+// console.log(35%4);
+// console.log(2**3);
+/*
+let str1="hello"
+let str2=" hardik"
+let str3=str1+str2
+console.log(str3); //hello hardik
+console.log(1+"2"); //12
+console.log("1"+2); //12
+console.log("1"+2+2); //122
+console.log(1+2+"3"); //33*/
+
+//console.log(+true); //1
+//console.log(true+); //SyntaxError: Unexpected token ')'
+//console.log(+""); //false
+
+
+
+// let num1, num2, num3
+// num1 = num2 = num3 = 2 + 2
+
+let gC=100
+//gC++
+// console.log(gC++); // 100
+// console.log(++gC); // 102
+
+console.log(++gC); //101
+console.log(gC++); // 101
+
+
+
+
+
+
+
+
+
+
+
+
 
 
