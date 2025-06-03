@@ -14,8 +14,8 @@ let isLoggedIn=false
 //undefined 
 //symbol => unique 
 
-//object
-
+//object. => will be explained in klater videos
+ 
 console.log(typeof"hardik") //String
 console.log(typeof 23)   //number
 console.log(typeof undefined) //undefined
