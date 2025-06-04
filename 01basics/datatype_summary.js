@@ -7,23 +7,23 @@
 // how data is stored in memory and the way to access those data
 // on the basis of these it is categorised into two types
 /*
-1) Primitive -7 (call by value, ..data copied)
+1) Primitive -7 (call by value, ..data copied) +++not original value changed
 number
 bigInt
 string
 boolean
 null  -- empty
-undefined --variable declared. .. memory space declared but value not
+undefined --variable declared. .. memory space declared but value not 
 symbol -- to make a value UNIQUE
 
 
 
-2) Non Primitive or Refrence type
+2) Non Primitive or Refrence type. +++ take refrence so og value changed
 Array
 Objects
 functions
 
-*/
+
 
 // const id=Symbol('123')
 // const anotherid=Symbol('123')
@@ -46,6 +46,31 @@ const myFunc=function(){
 console.log(typeof heros); //object
 console.log(typeof myObj);//object
 console.log(typeof myFunc); //function object
+*/
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// Stack (Primitive) , Heap (Non-Primitive)
+//    copy                  Reefrence
+
+
+let utubename="Hardikdotcom"
+let anothername=utubename
+anothername="sharmadotcom"
+// console.log(utubename); //Hardikdotcom 
+// console.log(anothername);  //sharmadotcom
+//** As copy used above 
+
+
+let userone={
+    email:"sharma@google.com",
+    upi:"user@ybl"
+}
+
+let usertwo=userone;
+usertwo.email="hardik@google.com"
+console.log(userone); //{ email: 'hardik@google.com', upi: 'user@ybl' } as refrence used so values changed for both
+
+
+
 
 
 
