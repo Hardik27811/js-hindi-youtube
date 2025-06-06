@@ -23,6 +23,12 @@ console.log(undefined ==0); //false in every case of undefined
 // strict check ******************* ( ===  ) value as well as datatype ******************************
 console.log("2" === 2); //false
 
-
+Number
+String
+BigInt
+Boolean
+undefined
+null
+Symbol
 
 
