@@ -35,7 +35,9 @@ const narr1=arr1.flat(Infinity)
 
 //
 // console.log(Array.isArray("Hardik")); //false
+
 // console.log(Array.from("hardik")); //[ 'h', 'a', 'r', 'd', 'i', 'k' ]
+
 // console.log(Array.from({name: "Hardik"})); //[]. empty cos need to specify key or value
 
 //
