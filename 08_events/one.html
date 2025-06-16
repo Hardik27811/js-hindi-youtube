@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html Events</title>
+</head>
+<body style="background-color: #212121;color: #fff;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+    
+</body>
+<script>
+    // document.getElementById('owl').onclick=function(){
+    //     alert('its an owl');
+    // }
+    // const body=document.querySelector('body')
+    // const btn=document.createElement('button')
+    // btn.style.backgroundColor="yellow"
+    // btn.innerHTML="Change bg"
+    // btn.style.color="red"
+    // document.body.append(btn)
+    // btn.addEventListener('click',function(e){
+    //     body.style.backgroundColor="white";
+    //     // setInterval(function (e) {
+    //     //     body.style.backgroundColor="#212121";
+    //     // },3000)
+    // })
+    // btn.addEventListener('dblclick',function(e){
+    //     body.style.backgroundColor="#212121";
+    //     // setInterval(function (e) {
+    //     //     body.style.backgroundColor="#212121";
+    //     // },3000)
+    // })
+//   document.querySelector('#owl').addEventListener('click',function(e){
+//     alert('its an owl')
+//   },false)
+
+  //type
+
+  // event bubbling and event capturing
+
+  //+++++++++++++++++++++++++++++++++++++++     event bubbling      ++++++++++++++++++++++++++++++++++++
+
+  document.getElementById('images').addEventListener('click',function(e){
+    // console.log('Image is clicked');
+    
+  },false)
+//   document.getElementById('owl').addEventListener('click',function(e){
+//     console.log('Owl is clicked');
+//     e.stopPropagation() //will stop bubling mean will stop running outer loop
+    
+//   },false)
+   
+//   Owl is clicked
+// one.html:93 Image is clicked
+// one.html:97 Owl is clicked
+// one.html:93 Image is clicked
+  //+++++++++++++++++++++++++++++++++++++++     event capturing      ++++++++++++++++++++++++++++++++++++
+
+//  document.getElementById('images').addEventListener('click',function(e){
+//     console.log('Image is clicked');
+    
+//   },true)
+//   document.getElementById('owl').addEventListener('click',function(e){
+//     console.log('Owl is clicked');
+    
+//   },true)
+
+  //one.html:104 Image is clicked
+// one.html:108 Owl is clicked
+
+// one.html:104 Image is clicked
+// one.html:108 Owl is clicked
+
+
+//++++++++++++++++++++++++++++++++        preventDefault          +++++++++++++++++++++++++++++++++++++
+
+document.getElementById('google').addEventListener('click',function(e){
+    e.preventDefault();
+    // console.log('google prevented');
+    e.stopPropagation();
+    
+})
+
+
+//+++++++++++++++++++++++++++++++       remove img              ++++++++++++++++++++++++++++++++++
+
+// document.querySelector('#images').addEventListener('click',function(e){
+//     console.log(e.target.parentNode);
+//     let removeit=e.target.parentNode
+//     removeit.remove();
+
+    // removeit.parentNode.removeChild(removeit)
+
+
+//+++++++++++++++++++++++++.            using tag name          ++++++++++++++========== 
+
+//.  coz in uppeer case if we click on link whole ul will disappear (spill over)
+
+
+    document.querySelector('#images').addEventListener('click',function(e){
+    console.log(e.target.tagName);
+    if(e.target.tagName === 'IMG'){
+        let removeit=e.target.parentNode
+        removeit.remove();
+    }
+    
+})
+
+
+</script>
+</html>
