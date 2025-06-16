@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-4</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+//    function addLang(langName){
+//     const li=document.createElement('li')
+//     li.innerHTML=`${langName}`
+//     document.querySelector('.language').appendChild(li)
+//    }
+//    addLang('python')
+    function addOptiLang(langName){
+        const li=document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptiLang('ruby')
+    addOptiLang('python')
+    addOptiLang('java')
+    addOptiLang('c++')
+    // const sel=document.querySelectorAll('li')
+    // console.log(sel);
+    // sel[1].innerHTML="python";
+    // console.log(sel[1].innerHTML);  // html
+
+    //+++++++++++++++++++++++++++++++++++++++++++++++++.  EDIT. +++++++++++++++++++++===++++++++++++++++++++++++++++++
+
+    // const sel=document.querySelector('li:nth-child(2)')
+
+    // sel.appendChild(document.createTextNode("html")).    // rubyhtml
+
+    // const sel=document.querySelector('li:nth-child(2)')
+
+    // sel.appendChild(sel.innerText="html")                   //html
+
+
+    const sel=document.querySelector('li:nth-child(2)')
+
+    const nli=document.createElement('li')
+
+    nli.textContent="html"
+
+   // sel.replaceWith(nli)                                    //html
+
+    const select=document.querySelector("li:nth-child(5)")
+
+    // console.log(select);
+
+    select.outerHTML='<li>TypeScript</li>'
+
+
+    //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++.  remove    ++++++++++++++++++++++++++++++++++++++++++++++++=
+    const gi=document.querySelector("li:last-child")
+    gi.remove()
+</script>
+</html>
